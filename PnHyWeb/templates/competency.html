@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+<title>competency</title>
+{% endblock %}
+
+{% block content %}
+<style>
+    main {
+    height: 500px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(login.jpg);
+}
+
+.main-info {
+    text-align: center;
+    width: 650px;
+    height: 200px;
+}
+
+.teams {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.teams-items {
+    padding: 2rem;
+    background: #89CFF3;
+}
+
+.teams-items img {
+    border-radius: 100%;
+    width: 350px;
+}
+
+footer {
+    background-color:  #192655;
+    color: #fff;
+    padding: .2rem;
+    text-align: center;
+    flex: 0 0 auto;
+}
+</style>
+    <main>
+        <div class="header-info">
+           <p><img src="{% static 'image/login.jpg' %}" alt="" style="width:350px;height:350px;">
+            <h1>สมรรถนะ</h1>
+            <p>1. ผู้เรียนสามารถระบุสัญลักษณ์และชื่อชิ้นส่วนของอุปกรณ์นิวเมติกส์และได้<br>
+            2. ผู้เรียนสามารถอธิบายการทำงานของวงจรนิวเมติกส์จากแผนภาพไดอะแกรมได้<br>
+            </p>
+        </div>
+    </main>
+
+    <section class="teams">
+        <div class="teams-items">
+            <h3>หน่วยที่ 1 อุปกรณ์นิวเมติกส์ </h3>
+            <img src="{% static 'image/อุปกรณ์.jpg' %}" alt="" style="width:350px;height:350px;">
+            <p> 1. ผู้เรียนสามารถบอกหน้าที่และส่วนประกอบของอุปกรณ์นิวเมติกส์ได้<br>
+                2. ผู้เรียนสามารถอธิบายหลักการทำงานของอุปกรณ์นิวเมติกส์ได้</p>
+        </div>
+        <div class="teams-items">
+            <h3>หน่วยที่ 2 งานควบคุมแบบอัตโนมัติ</h3>
+            <img src="{% static 'image/auto.jpg' %}" alt="" style="width:350px;height:350px;">
+            <p> 1. ผู้เรียนสามารถอ่านสัญลักษณ์วาล์วควบคุมทิศทาง3/2 แบบ Roller Trip ได้ <br>
+                2. ผู้เรียนสามารถอธิบายหลักการทำงานวาล์วควบคุมทิศทาง3/2 แบบ Roller Trip ได้</p>
+        </div>
+        <div class="teams-items">
+            <h3>หน่วยที่ 3 วงจรนิวเมติกส์ไฟฟ้า</h3>
+            <img src="{% static 'image/ไฟฟ้า.jpg' %}" alt="" style="width:350px;height:350px;">
+            <p> 1. ผู้เรียนสามารถอธิบายหลักการทำงานงานควบคุมโดยใช้ไฟฟ้าได้</p>
+        </div>
+    </section>
+    {% endblock %}

@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %} ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+    {% block title %}
+    {% endblock %}
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <h1>Pnuematics</h1>
+        </div>
+        <ul>
+            <li class="บทเรียน"><a href="#">บทเรียน</a>
+                <ul>
+                    <li><a href="{% url 'unit1' %}"><font size="2">หน่วยที่ 1 </font></a></li>
+                    <li><a href="{% url 'unit2' %}"><font size="2">หน่วยที่ 2 </font></a></li>
+                    <li><a href="{% url 'unit3' %}"><font size="2">หน่วยที่ 3 </font></a></li>
+                </ul>
+            </li>
+            <li class="กิจกรรม"><a class="active" href="#">กิจกรรม</a></li>
+            <li class="แบทดสอบ"><a href="#">แบบทดสอบ</a>
+                <ul>
+                    <li><a href="{% url 'pretest' %}"><font size="2">แบบทดสอบก่อนเรียน</font></a></li>
+                    <li><a href="#"><font size="2">แบบทดสอบหลังเรียน</font></a></li>
+                </ul>
+            </li>
+            <li class="ออกจากระบบ"><a href="#">ออกจากระบบ</a></li>
+        </ul>
+    </div>
+  <div>
+   {% block content %}
+   {% endblock %}
+  </div>
+  <footer>
+    <p><b><ins>Contact</b></ins><br>
+    anusit.anm@kmutt.ac.th<br>
+    thawanphon.tt@mail.kmutt.ac.th<br>
+    pornpimon.018@mail.kmutt.ac.th<br>
+    Faculty of Industrial Education and Technology Deparment of Mechanical Engineering, KMUTT.
+    </p>
+</footer>
+</body>
+</html>
