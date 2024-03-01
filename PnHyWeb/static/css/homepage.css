@@ -195,6 +195,10 @@ button:hover {
 
 @media screen and (max-width: 425px) {
 
+    .center-text{
+        margin: 0 2px;
+    }
+
     .drawer-profile-text,
     .drawer-link {
         display: flex;

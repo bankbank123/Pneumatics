@@ -110,3 +110,12 @@ def get_user(request):
     else:
         return HttpResponse("Only POST requests are allowed", status=405)
 
+
+
+if not Role.objects.filter(role_id=Role.TEACHER).exists():
+    teacher_role = Role.objects.create(role_id=Role.TEACHER, role_name='Teacher')
+    teacher_role.save()
+
+if not Role.objects.filter(role_id=Role.STUDENT).exists():
+    student_role = Role.objects.create(role_id=Role.STUDENT, role_name='Student')
+    student_role.save()
