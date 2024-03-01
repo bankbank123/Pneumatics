@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
     <title>Homepage</title>
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,11 +99,6 @@
         <button>Welcome to Pneumatics ...</button>
     </div>
 
-
-
-    <!-- <div class="container">
-        <button>Welcome to Pneumatics ...</button>
-    </div> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
@@ -126,6 +121,7 @@
 
         const onClickOpenDrawer = () => {
             const drawer_container = document.getElementById('drawer-container')
+            drawer_container.style.animation = 'SlideIn .25s'
             drawer_container.style.display = 'block'
         }
 
