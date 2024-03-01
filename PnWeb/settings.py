@@ -76,13 +76,14 @@ WSGI_APPLICATION = 'PnWeb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgres://pneumaticsdb_user:p1pSzqovD66i4itL0qv4r7gxlYMs6SLm@dpg-cngl5mnsc6pc73atu8ag-a/pneumaticsdb',
-        conn_max_age=600
-    )
-}
+if not DEBUG:
+    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': 'db.sqlite3',
+        }}
 
 
 # Password validation
