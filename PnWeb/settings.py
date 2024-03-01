@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os.path
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'PnWeb.urls'
@@ -75,15 +77,12 @@ WSGI_APPLICATION = 'PnWeb.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'student_db',
-        'USER': 'root',
-        'PASSWORD': '',#4851
-        'HOST': 'localhost',
-        'PORT': '3306',
-    },
-}  
+    'default': dj_database_url.config(
+        # Replace this value with your local database's connection string.
+        default='postgres://pneumaticsdb_user:p1pSzqovD66i4itL0qv4r7gxlYMs6SLm@dpg-cngl5mnsc6pc73atu8ag-a/pneumaticsdb',
+        conn_max_age=600
+    )
+}
 
 
 # Password validation
@@ -122,6 +121,12 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+if not DEBUG:
+    # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
+    # and renames the files with unique names for each version to support long-term caching
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
