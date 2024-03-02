@@ -61,7 +61,8 @@ a:hover {
     color: black;
 }
 
-.welcome-container, .welcome-text {
+.welcome-container,
+.welcome-text {
     display: flex;
     flex-direction: column;
     width: max-content;
@@ -78,8 +79,6 @@ a:hover {
 }
 
 .drawer-container {
-    height: 100%;
-    max-width: 275px;
     width: 90%;
     background-color: white;
     position: absolute;
@@ -184,6 +183,11 @@ a:hover {
 
 @media screen and (max-width: 425px) {
 
+    .drawer-container {
+        max-width: 250px;
+        height: 120%;
+    }
+
     .center-text {
         margin: 0 2px;
     }
@@ -271,7 +275,8 @@ a:hover {
     }
 
     .drawer-container {
-        max-width: 250px;
+        max-width: 275px;
+        height: 100%;
     }
 
     .drawer-profile-text,
