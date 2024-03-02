@@ -61,38 +61,23 @@ a:hover {
     color: black;
 }
 
-.welcome-container {
+.welcome-container, .welcome-text {
+    display: flex;
+    flex-direction: column;
     width: max-content;
     height: max-content;
 }
 
-button {
-    font-size: 46px;
-    background: none;
-    border: #272829;
-    color: #272829;
-    font-weight: 600;
-    letter-spacing: 4px;
-    position: absolute;
-    transition: .4s;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    width: max-content;
-    height: max-content;
+.welcome-text {
+    flex-direction: row;
 }
 
-button:hover {
-    color: #fff;
-}
-
-.menu-icon {
+.menu-icon,
+.drawer-container {
     display: none;
 }
 
 .drawer-container {
-    display: none;
     height: 100%;
     max-width: 275px;
     width: 90%;
@@ -114,10 +99,6 @@ button:hover {
     a:hover {
         font-size: 24px;
     }
-
-    button {
-        font-size: 42px;
-    }
 }
 
 @media (max-width: 768px) and (min-width: 575px) {
@@ -132,10 +113,6 @@ button:hover {
     a:hover {
         font-size: 20px;
     }
-
-    button {
-        font-size: 34px;
-    }
 }
 
 @media (max-width: 575px) and (min-width: 500px) {
@@ -143,9 +120,6 @@ button:hover {
         font-size: 26px;
     }
 
-    button {
-        font-size: 28px;
-    }
 }
 
 @media (max-width: 500px) and (min-width: 425px) {
@@ -161,9 +135,6 @@ button:hover {
         font-size: 18px;
     }
 
-    button {
-        font-size: 22px;
-    }
 }
 
 @media (max-width: 425px) and (min-width: 375px) {
@@ -179,10 +150,6 @@ button:hover {
     .nav-container {
         flex-direction: row;
         padding: 10px;
-    }
-
-    button {
-        font-size: 20px;
     }
 
     .menu-icon {
@@ -208,10 +175,6 @@ button:hover {
         padding: 10px;
     }
 
-    button {
-        font-size: 18px;
-    }
-
     .menu-icon {
         display: block;
         width: 40px;
@@ -221,7 +184,7 @@ button:hover {
 
 @media screen and (max-width: 425px) {
 
-    .center-text{
+    .center-text {
         margin: 0 2px;
     }
 
@@ -294,7 +257,7 @@ button:hover {
         width: 32px;
         height: 32px;
     }
-    
+
     .drawer-link-icon {
         margin-right: 10px;
     }
@@ -303,7 +266,7 @@ button:hover {
 
 @media screen and (max-width: 375px) {
 
-    .center-text{
+    .center-text {
         margin: 0 2px;
     }
 
@@ -380,7 +343,7 @@ button:hover {
         width: 30px;
         height: 30px;
     }
-    
+
     .drawer-link-icon {
         margin-right: 10px;
     }
@@ -394,6 +357,7 @@ button:hover {
     0% {
         right: -28%;
     }
+
     100% {
         right: 0%;
     }
