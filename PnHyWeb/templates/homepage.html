@@ -8,12 +8,11 @@
         name='viewport' />
     <meta name="description" content="Homepage Pneumatics">
     <title>Homepage</title>
-    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    <link rel="preload" href="{% static 'css/homepage.css' %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{% static 'css/homepage.css' %}"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
-
 </head>
 
 <body>
@@ -178,7 +177,7 @@
             drawer_sign_out.style.display = 'none'
         }
 
-        function fetchData() {
+        async function fetchData() {
             $.post('/getUser', { token: token }, function (data) {
                 const user = data;
                 document.getElementById('userFullName').innerText = user.first_name + ' ' + user.last_name;
