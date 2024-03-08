@@ -21,4 +21,7 @@ urlpatterns = [
     path("getUser", views.get_user, name='getUser'),
     path('postLogin', views.postLogin, name="postLogin"),
     path('postLogout', views.postLogout, name="postLogout"),
+    path('studentReportPost', views.get_student_report, name="studentReportPost"),
+    path("studentReport/", views.studentReport, name="studentReport"),
+    path("pretestPost/", views.postPretest, name="pretestPost"),
 ]

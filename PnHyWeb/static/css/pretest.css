@@ -1,0 +1,146 @@
+* {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title-pretest {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.test-title, .title-pretest, .test-choice, .choice-container {
+    max-width: max-content;
+    height: max-content;
+}
+
+.choice-container {
+    display: flex;
+    align-items: center;
+}
+
+.test-choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.test-container {
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.test-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 200px;
+}
+
+
+.choice-container {
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.choice-input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; 
+}
+
+@media (max-width: 1440px) and (min-width: 1024px) {
+    .test-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .test-title {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 680px) {
+    .test-title {
+        font-size: 24px;
+        margin-right: 250px;
+    }
+}
+
+@media (max-width: 680px) and (min-width: 425px) {
+    .test-title {
+        font-size: 24px;
+    }
+
+    .choice-container {
+        font-size: 14px;
+    }
+
+    .test-container {
+        align-items: normal;
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 425px) and (min-width: 320px) {
+    .test-title {
+        font-size: 22px;
+        margin: 0;
+    }
+
+    .choice-container {
+        font-size: 14px;
+    }
+
+    .test-container {
+        align-items: normal;
+        margin: 0 15px;
+    }
+}
+
+
+
+/* body {
+    margin: 50;
+    padding: 50;
+    background: #ffffff;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.question {
+    display: none;
+}
+
+.teamsitems {
+    padding: 1rem;
+    background: #E5E1DA;
+}
+
+.question.active {
+    display: block;
+    padding: 5rem;
+    background: #ffffff;
+    flex: 1 0 auto;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.alert-container {
+    position: absolute;
+    max-width: 500px;
+    max-height: 200px;
+    background-color: #fff;
+} */

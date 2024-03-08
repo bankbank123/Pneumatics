@@ -1,11 +1,14 @@
 import secrets
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
-from PnHyWeb.models import Role, Student
+from PnHyWeb.models import ReportScore, Role, Student
 from django.views.decorators.csrf import csrf_exempt
+from django.template import loader
 import pdb
 
-
+def navbar(request):
+    templete = loader.get_template('navbar.html')
+    return HttpResponse(templete.render())
 
 def home(request):
     return render(request,'homepage.html')
@@ -33,6 +36,9 @@ def test(request):
 
 def pretest(request):
     return render(request, 'pretest.html')
+
+def studentReport(request):
+    return render(request, 'studentReport.html')
 
 @csrf_exempt
 def register_post(request):
@@ -109,6 +115,49 @@ def get_user(request):
             return JsonResponse({'first_name': first_name, 'last_name': last_name})
     else:
         return HttpResponse("Only POST requests are allowed", status=405)
+
+@csrf_exempt
+def postPretest(request):
+    if request.method(request):
+        token = request.POST.get('token')
+        pretest_score = request.POST('pretest')
+        if Student.objects.filter(token=token).exists():
+            student_search = Student.objects.get(token=token)
+            if ReportScore.objects.filter(student_id = student_search.student_id).exists():
+                student_save = ReportScore(student_id = student_search.student_id, pretest = pretest_score)
+                student_save.save()
+            else :
+                return JsonResponse({'error': 'The student has already taken the test.'})
+        else: 
+            return JsonResponse({'error' : 'Please Login for do test.'})
+
+@csrf_exempt
+def get_student_report(request):
+
+    if request.method == "GET":
+        # Fetching student and their report scores
+        students_with_scores = []
+        for student in Student.objects.all():
+            try:
+                report_score = ReportScore.objects.get(student=student)
+                students_with_scores.append({
+                    'student_id': student.student_id,
+                    'first_name': student.first_name,
+                    'last_name': student.last_name,
+                    'pre_test': report_score.pre_test,
+                    'post_test': report_score.post_test,
+                })
+            except ReportScore.DoesNotExist:
+                students_with_scores.append({
+                    'student_id': student.student_id,
+                    'first_name': student.first_name,
+                    'last_name': student.last_name,
+                    'pre_test': None,
+                    'post_test': None,
+                })
+                
+        return JsonResponse({'student_data' : students_with_scores})
+
 
 
 

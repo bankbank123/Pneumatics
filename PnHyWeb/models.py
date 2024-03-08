@@ -11,8 +11,9 @@ class Role(models.Model):
 
     role_id = models.CharField(max_length=100, choices=ROLE_CHOICES, primary_key=True)
     role_name = models.CharField(max_length=100)
+
 class ReportScore(models.Model):
-    student = models.ForeignKey('Student', on_delete=models.CASCADE)
+    student = models.OneToOneField('Student', on_delete=models.CASCADE, primary_key=True)
     pre_test = models.IntegerField(null=True)
     post_test = models.IntegerField(null=True)
 
@@ -25,4 +26,3 @@ class Student(models.Model):
     token = models.CharField(max_length=2555, null=True)
     datetime = models.DateTimeField(auto_now_add=True)
     role = models.ForeignKey(Role, on_delete=models.CASCADE)
-
