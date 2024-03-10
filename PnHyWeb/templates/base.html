@@ -11,6 +11,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'css/pretest.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     {% block title %}
     {% endblock %}
 </head>
@@ -104,12 +105,13 @@
     {% endblock %}
 
     <footer>
-        <p><b><ins>Contact</b></ins><br>
+        <div class="footer-text">
+            Contact<br>
             anusit.anm@kmutt.ac.th<br>
             thawanphon.tt@mail.kmutt.ac.th<br>
             pornpimon.018@mail.kmutt.ac.th<br>
             Faculty of Industrial Education and Technology Deparment of Mechanical Engineering, KMUTT.
-        </p>
+        </div>
     </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

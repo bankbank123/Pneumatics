@@ -118,6 +118,9 @@
     }
 
     const token = localStorage.getItem('token')
+    if (!token) {
+        window.location.href = "{% url 'login' %}";
+    }
     window.onload = function () {
         $.post('/getUser', { token: token }, function (data) {
             const user = data

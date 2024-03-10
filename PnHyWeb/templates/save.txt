@@ -50,7 +50,7 @@
     <input type="radio" name="q1" value="จ"> จ. ระบบที่ใช้พลังงานจากไอน้ำมาเป็นตัวขับเคลื่อนในการทำงาน<br>
     <button class="btn" onclick="nextQuestion('question1', 'question2', 1)">ถัดไป</button>
   </div>
-  <div class="question" id="question2">
+  <div class="question" id="que stion2">
     <h2>2. ชุดควบคุมและปรับปรุงคุณภาพลมประกอบด้วยอะไรบ้าง</h2>
     <input type="radio" name="q2" value="ก"> ก. ตัวกรอง วาล์วปรับลดและควบคุมแรงดัน ถังเก็บลม<br>
     <input type="radio" name="q2" value="ข"> ข. ตัวกรอง ชุดตัวจ่ายน้ำมันหล่อลื่น ชุดควบคุมเครื่องอัดลม<br>

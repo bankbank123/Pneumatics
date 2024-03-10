@@ -118,18 +118,18 @@ def get_user(request):
 
 @csrf_exempt
 def postPretest(request):
-    if request.method(request):
+    if request.method == 'POST':
         token = request.POST.get('token')
-        pretest_score = request.POST('pretest')
+        pretest_score = request.POST.get('pretest')
         if Student.objects.filter(token=token).exists():
             student_search = Student.objects.get(token=token)
-            if ReportScore.objects.filter(student_id = student_search.student_id).exists():
-                student_save = ReportScore(student_id = student_search.student_id, pretest = pretest_score)
-                student_save.save()
-            else :
-                return JsonResponse({'error': 'The student has already taken the test.'})
-        else: 
-            return JsonResponse({'error' : 'Please Login for do test.'})
+            student_save = ReportScore(student_id=student_search.student_id, pre_test=pretest_score)
+            student_save.save()
+            return HttpResponse("Pretest score saved successfully")  
+
+
+    return HttpResponse("Invalid request or student not found")
+
 
 @csrf_exempt
 def get_student_report(request):
