@@ -116,11 +116,11 @@
                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
             </svg>
             <div class="welcome-name" id="userFullName-desktop" onclick="onClickCompetency()">
-                <div class="welcome-login welcome-text-container" onclick="onClickLogin()">
+                <div class="welcome-login welcome-text-container" id="login" onclick="onClickLogin()">
                     Login
                 </div>
                 <div class="welcome-center-text welcome-text-container">or</div>
-                <div class="welcome-register welcome-text-container" onclick="onClickRegister()">
+                <div class="welcome-register welcome-text-container" id="Sign-up" onclick="onClickRegister()">
                     Sign up
                 </div>
             </div>
@@ -144,7 +144,19 @@
         window.addEventListener("resize", handleResize);
 
         const onClickCompetency = () => {
-            window.location.href = "{% url 'competency' %}"
+            const login = document.getElementById('login')
+            const SignUp = document.getElementById('Sign-up')
+            document.addEventListener("click", function(e){
+                if (e.target === login){
+                    window.location.href = "{% url 'login' %}"
+                    return
+                }
+                if (e.target === SignUp){
+                    window.location.href = "{% url 'register' %}"
+                    return
+                }
+                window.location.href = "{% url 'competency' %}"
+            })
         }
 
 

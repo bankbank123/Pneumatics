@@ -142,7 +142,12 @@
             drawer_container.style.display = "none";
         }
     };
+    const token_check = localStorage.getItem('token')
 
+    if (!token_check) {
+        console.log('test')
+        window.location.href = "{% url 'login' %}"
+    }
     window.addEventListener("resize", handleResize);
 
     const onClickUnit_1 = () => {

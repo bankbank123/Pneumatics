@@ -104,6 +104,15 @@ a:hover {
 
 }
 
+.welcome-login {
+    display: flex;
+    z-index: 999;
+}
+.welcome-register {
+    display: flex;
+    z-index: 999;
+}
+
 .profile-name,
 .welcome-line-2,
 .welcome-text-container,
