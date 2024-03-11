@@ -8,14 +8,17 @@
 
 body {
     position: relative;
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    /* overflow-x: hidden; */
 }
 
 .navbar-container {
     font-size: 40px;
     width: 100%;
     background-color: #192655;
-    height: 100px;
+    max-height: 100px;
+    height: 100%;
     position: relative;
 }
 
@@ -26,7 +29,6 @@ body {
     font-weight: 800;
 }
 
-.navbar-logo,
 .narbar-link-container,
 .narbar-link,
 .navbar-link-unit,
@@ -62,6 +64,11 @@ body {
     text-decoration: underline;
 }
 
+.Logout {
+    margin-right: 95px;
+    margin-left: 100px;
+}
+
 .navbar-link-unit {
     background-color: #192655;
     font-size: 20px;
@@ -72,7 +79,20 @@ body {
     display: none;
 }
 
-.navbar-unit {
+.navbar-link-test {
+    background-color: #192655;
+    font-size: 20px;
+    font-weight: 600;
+    display: none;
+    height: max-content;
+    max-width: max-content;
+    position: absolute;
+    top: 160%;
+    left: 33%;
+}
+
+.navbar-unit,
+.navbar-test {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +102,15 @@ body {
     padding: 10px;
 }
 
-.navbar-unit:hover {
+.navbar-test {
+    display: flex;
+    width: max-content;
+    height: 50px;
+    padding: 10px;
+}
+
+.navbar-unit:hover,
+.navbar-test:hover {
     background-color: rgba(161, 161, 161, 0.616);
 }
 
@@ -96,17 +124,43 @@ body {
     top: 0%;
 }
 
+footer {
+    margin-top: auto;
+}
+
 @media (max-width: 1440px) and (min-width: 1024px) {
     .navbar-logo {
-        font-size: 36px;
+        font-size: 34px;
     }
 
     .narbar-link {
         font-size: 26px;
     }
+
+    .Logout {
+        margin-right: 55px;
+        margin-left: 75px;
+    }
+
+    .navbar-link-test {
+        left: 34.5%;
+    }
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
+
+    .navbar-link-test {
+        left: 35.5%;
+        font-size: 18px;
+    }
+
+    .navbar-test {
+        align-items: center;
+        text-align: center;
+        width: 120px;
+        height: 75px;
+    }
+
     .navbar-logo {
         font-size: 32px;
     }
@@ -116,7 +170,7 @@ body {
     }
 
     .narbar-link {
-        font-size: 24px;
+        font-size: 20px;
         margin: 0 10px;
     }
 
@@ -128,9 +182,27 @@ body {
     .navbar-unit {
         padding: 10px;
     }
+
+    .Logout {
+        margin-right: 60px;
+        margin-left: 40px;
+    }
 }
 
 @media (max-width: 768px) and (min-width: 575px) {
+
+    .navbar-link-test {
+        left: 31.5%;
+        font-size: 16px;
+    }
+
+    .navbar-test {
+        align-items: center;
+        text-align: center;
+        width: 120px;
+        height: 75px;
+    }
+
     .navbar-logo {
         font-size: 28px;
     }
@@ -153,11 +225,18 @@ body {
         width: 80px;
         padding: 10px 0;
     }
+
+    .Logout {
+        margin-right: 55px;
+        margin-left: 20px;
+    }
 }
 
 @media (max-width: 575px) and (min-width: 320px) {
     .drawer-container {
+        z-index: 999;
         flex-direction: column;
+        height: 178vh;
     }
 
     .navbar-logo {
@@ -187,6 +266,7 @@ body {
     .profile-container,
     .drawer-profile-icon,
     .drawer-icon,
+    .drawer-sub-test,
     .hide-unit {
         width: max-content;
         height: max-content;
@@ -244,7 +324,7 @@ body {
         margin-right: 15px;
     }
 
-    .drawer-sub-unit {
+    .drawer-sub-unit, .drawer-sub-test {
         display: none;
         width: 100%;
         height: max-content;

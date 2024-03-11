@@ -24,13 +24,18 @@
         <div class="narbar-link-container">
             <div class="narbar-link" id="navbar-link-unit" onmouseenter="onMouseHover()">บทเรียน</div>
             <div class="narbar-link">กิจกรรม</div>
-            <div class="narbar-link">แบบทดสอบ</div>
-            <div class="narbar-link">ออกจากระบบ</div>
+            <div class="narbar-link" id="navbar-link-test-main" onmouseenter="onMouseHoverTest()">แบบทดสอบ</div>
+            <div class="narbar-link Logout">ออกจากระบบ</div>
             <div class="navbar-link-unit" id="navbar-link-unit-container" onmouseenter="onMouseHover()"
                 onmouseleave="onMouseLeave()">
-                <div class="navbar-unit">หน่วยที่ 1</div>
-                <div class="navbar-unit">หน่วยที่ 2</div>
-                <div class="navbar-unit">หน่วยที่ 3</div>
+                <div class="navbar-unit" onclick="onClickUnit_1()">หน่วยที่ 1</div>
+                <div class="navbar-unit" onclick="onClickUnit_2()">หน่วยที่ 2</div>
+                <div class="navbar-unit" onclick="onClickUnit_3()">หน่วยที่ 3</div>
+            </div>
+            <div class="navbar-link-test" id="navbar-link-test" onmouseenter="onMouseHoverTest()"
+                onmouseleave="onMouseLeaveTest()">
+                <div class="navbar-test" onclick="onClickPretest()">แบบฝึกหัดก่อนเรียน</div>
+                <div class="navbar-test" onclick="onClickPosttest()">แบบฝึกหัดหลังเรียน</div>
             </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-list menu-icon"
@@ -76,9 +81,9 @@
             </svg>
         </div>
         <div class="drawer-sub-unit" style="display:none;" id="sub-unit">
-            <div class="sub-unit-1 sub-unit">หน่วยที่ 1</div>
-            <div class="sub-unit-2 sub-unit">หน่วยที่ 2</div>
-            <div class="sub-unit-3 sub-unit">หน่วยที่ 3</div>
+            <div class="sub-unit-1 sub-unit" onclick="onClickUnit_1()">หน่วยที่ 1</div>
+            <div class="sub-unit-2 sub-unit" onclick="onClickUnit_2()">หน่วยที่ 2</div>
+            <div class="sub-unit-3 sub-unit" onclick="onClickUnit_3()">หน่วยที่ 3</div>
         </div>
         <div class="drawer-activity sub-drawer"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                 fill="currentColor" class="bi bi-activity drawer-icon sub-drawer-icon" viewBox="0 0 16 16">
@@ -87,9 +92,23 @@
             </svg>
             กิจกรรม - Activity
         </div>
-        <div class="drawer-test sub-drawer"><img src="../static/image/quiz.png" alt=""
-                class="test-icon drawer-icon sub-drawer-icon">
+        <div class="drawer-test sub-drawer" onclick="onClcikSubTestDrawer()">
+            <img src="../static/image/quiz.png" alt="" class="test-icon drawer-icon sub-drawer-icon">
             แบบทดสอบ - Test
+            <svg xmlns="http://www.w3.org/2000/svg" id="show-test" width="16" height="16" fill="currentColor"
+                class="bi bi-caret-down-fill drawer-icon sub-drawer-icon not-activate" viewBox="0 0 16 16">
+                <path
+                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" id="hide-test" width="16" height="16" fill="currentColor"
+                class="bi bi-caret-right-fill hide-unit sub-drawer-icon" viewBox="0 0 16 16">
+                <path
+                    d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+            </svg>
+        </div>
+        <div class="drawer-sub-test" id="sub-test">
+            <div class="sub-test sub-unit" onclick="onClickPretest()">แบบฝึกหัดก่อนเรียน</div>
+            <div class="sub-test sub-unit" onclick="onClickPosttest()">แบบฝึกหัดหลังเรียน</div>
         </div>
         <div class="drawer-exit sub-drawer">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
@@ -103,7 +122,6 @@
     </div>
     {% block content %}
     {% endblock %}
-
     <footer>
         <div class="footer-text">
             Contact<br>
@@ -127,6 +145,37 @@
 
     window.addEventListener("resize", handleResize);
 
+    const onClickUnit_1 = () => {
+        window.location.href = "{% url 'unit1' %}"
+    }
+    const onClickUnit_2 = () => {
+        window.location.href = "{% url 'unit2' %}"
+    }
+    const onClickUnit_3 = () => {
+        window.location.href = "{% url 'unit3' %}"
+    }
+    const onClickPretest = () => {
+        window.location.href = "{% url 'pretest' %}"
+    }
+    const onClickPosttest = () => {
+        window.location.href = "{% url 'posttest' %}"
+    }
+
+    const onClcikSubTestDrawer = () => {
+        const sub_test = document.getElementById('sub-test')
+        const show_test = document.getElementById('show-test')
+        const hide_test = document.getElementById('hide-test')
+        if (sub_test.style.display === "none") {
+            sub_test.style.display = "flex"
+            show_test.classList.remove('not-activate')
+            hide_test.classList.add('not-activate')
+        } else {
+            sub_test.style.display = "none"
+            show_test.classList.add('not-activate')
+            hide_test.classList.remove('not-activate')
+        }
+    }
+
     const onClickSubDrawer = () => {
         const sub_unit = document.getElementById('sub-unit')
         const show_unit = document.getElementById('show-unit')
@@ -147,14 +196,19 @@
         const drawer_container = document.getElementById('drawer-container')
         const body = document.getElementById('body')
         drawer_container.style.display = "none"
-        body.style.backgroundColor = "white"
     }
 
     document.addEventListener("click", function (e) {
         const navbar_link_unit = document.getElementById('navbar-link-unit')
+        const test_container = document.getElementById('navbar-link-test')
+        const main_test_container = document.getElementById('navbar-link-test-main')
         const unit_container = document.getElementById('navbar-link-unit-container')
         if (e.target !== navbar_link_unit && e.target !== unit_container) {
             unit_container.style.display = "none"
+        }
+
+        if (e.target !== test_container && e.target !== main_test_container) {
+            test_container.style.display = "none"
         }
     })
 
@@ -163,7 +217,6 @@
         const drawer_container = document.getElementById('drawer-container')
         drawer_container.style.animation = "SlideIn .25s"
         drawer_container.style.display = "flex"
-        body.style.backgroundColor = "rgba(138, 138, 138, 0.685)"
     }
 
     const token = localStorage.getItem('token')
@@ -184,6 +237,16 @@
         const unit_container = document.getElementById('navbar-link-unit-container')
         unit_container.style.display = "none"
     }
+
+    const onMouseHoverTest = () => {
+        const test_container = document.getElementById('navbar-link-test')
+        test_container.style.display = "block"
+    }
+    const onMouseLeaveTest = () => {
+        const test_container = document.getElementById('navbar-link-test')
+        test_container.style.display = "none"
+    }
+
 </script>
 
 </html>

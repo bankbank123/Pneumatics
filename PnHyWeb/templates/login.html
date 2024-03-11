@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/> 
-    <meta name="description" content="Login For Start Quiz"/>
+    <meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5'
+        name='viewport' />
+    <meta name="description" content="Login For Start Quiz" />
     <title>login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -19,12 +20,15 @@
 
 <body>
     <div class="login-container">
-        <div class="error_message" id="error">
+        <div class="error_message" id="error-container">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-info-lg"
                 viewBox="0 0 16 16">
                 <path
                     d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0" />
             </svg>
+            <div class="error" id="error">
+
+            </div>
         </div>
         <div class="wrapper">
             <h1><b>Login</b></h1>
@@ -40,7 +44,7 @@
                             d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
                     </svg>
                     <div class="information-container" id="information-container">
-                        - can use Firstname or Student ID
+                        - can use Student ID
                     </div>
                     <input type="text" class="form-control" id="login-input" aria-label="login-input">
                 </div>
@@ -66,15 +70,24 @@
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-
+        document.addEventListener("click" , function(e) {
+            const error = document.getElementById('error')
+            const error_container = document.getElementById('error-container')
+            const login_input = document.getElementById('login-input')
+            const password_input = document.getElementById('password-input')
+            if (e.target === login_input || e.target === password_input){
+                error_container.style.display = 'none'
+                error.innerHTML = ''
+            }
+        })
         const PostLoing = () => {
             const username = document.getElementById('login-input').value;
             const password = document.getElementById('password-input').value;
+            const error_container = document.getElementById('error-container')
             const error = document.getElementById('error');
             if (username.trim() === '' || password.trim() === '') {
-
-                error.innerHTML += 'username or password is empty'
-                error.style.display = 'flex';
+                error.innerHTML = 'username or password is empty'
+                error_container.style.display = 'flex';
                 return;
             }
 
@@ -85,8 +98,8 @@
                     window.location.href = "{% url 'home' %}";
                 })
                 .fail(function () {
-                    error.innerHTML += 'username or password incorrect'
-                    error.style.display = 'flex';
+                    error.innerHTML = 'username or password incorrect'
+                    error_container.style.display = 'flex';
                 });
         };
 

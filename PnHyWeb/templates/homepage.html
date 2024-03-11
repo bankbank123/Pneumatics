@@ -115,7 +115,7 @@
                 viewBox="0 0 16 16">
                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
             </svg>
-            <div class="welcome-name" id="userFullName-desktop">
+            <div class="welcome-name" id="userFullName-desktop" onclick="onClickCompetency()">
                 <div class="welcome-login welcome-text-container" onclick="onClickLogin()">
                     Login
                 </div>
@@ -142,6 +142,10 @@
         };
 
         window.addEventListener("resize", handleResize);
+
+        const onClickCompetency = () => {
+            window.location.href = "{% url 'competency' %}"
+        }
 
 
         const onClickCloseDrawer = () => {
@@ -177,6 +181,7 @@
             drawer_sign_out.style.display = 'none'
         }
 
+        // ดึงชื่อของผู้ใช้งาน
         async function fetchData() {
             $.post('/getUser', { token: token }, function (data) {
                 const user = data;

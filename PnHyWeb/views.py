@@ -6,9 +6,6 @@ from django.views.decorators.csrf import csrf_exempt
 from django.template import loader
 import pdb
 
-def navbar(request):
-    templete = loader.get_template('navbar.html')
-    return HttpResponse(templete.render())
 
 def home(request):
     return render(request,'homepage.html')
@@ -37,6 +34,9 @@ def test(request):
 def pretest(request):
     return render(request, 'pretest.html')
 
+def posttest(request):
+    return render(request, 'posttest.html')
+
 def studentReport(request):
     return render(request, 'studentReport.html')
 
@@ -53,7 +53,7 @@ def register_post(request):
         email = request.POST['email']
         password = request.POST['password']
         confirm_password = request.POST['confirm_password']
-        token = secrets.token_urlsafe(100)
+        token = secrets.token_urlsafe(255)
         if student_id == '' or first_name == '' or last_name == '' or email == '' or password == '' or confirm_password == '':
             error_message = "Please fill in complete information."
             return render(request, 'register.html', {'error_message': error_message})
@@ -81,18 +81,19 @@ def register_post(request):
 def postLogin(request):
     if request.method == 'POST':
         username = request.POST.get('username')
-        user = Student.objects.filter(first_name=username).first() \
-                or Student.objects.filter(student_id=username).first() \
+        password = request.POST.get('password')
+        user =  Student.objects.filter(student_id=username).first() \
                 or Student.objects.filter(email=username).first()
-        if user:
-            if user.token:
-                return JsonResponse({'token': user.token})
-            else:
-                token = secrets.token_urlsafe(100)
-                user.token = token
-                user.save()
-                return JsonResponse({'token': token})
-            
+        if user.password == password:
+            token = secrets.token_urlsafe(255)
+            user.token = token
+            user.save()
+            return JsonResponse({'sucess' : 'Login Sucessfully', 'token' : token})
+        else:
+            return JsonResponse(status=401)
+    else :
+        return HttpResponse("Only POST requests are allowed", status=405)
+    
 @csrf_exempt
 def postLogout(request):
     if request.method == 'POST':
@@ -130,6 +131,18 @@ def postPretest(request):
 
     return HttpResponse("Invalid request or student not found")
 
+@csrf_exempt
+def postPosttest(request):
+    if request.method == 'POST':
+        token = request.POST.get('token')
+        posttest_score = request.POST.get('pretest')
+        if Student.objects.filter(token=token).exists():
+            student_search = Student.objects.get(token=token).student_id
+            student_pretest = ReportScore.objects.get(student_id = student_search).pre_test
+            student_save = ReportScore(student_id=student_search, pre_test = student_pretest, post_test=posttest_score)
+            student_save.save()
+            return HttpResponse("Pretest score saved successfully")  
+    return HttpResponse("Invalid request or student not found")
 
 @csrf_exempt
 def get_student_report(request):
