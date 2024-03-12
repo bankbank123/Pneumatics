@@ -1,319 +1,399 @@
-body {
+* {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.unit1-container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.teamsitems, .teams-items, .teams, .teams-items-details, .unit-container, .unit-title ,.unit-details, .unit-sub-title, .unit-table, .unit-sub-title-1,.unit-sub-title-2 ,.image-center{
+    width: 100%;
+}
+
+.unit-container {
+    padding: 2rem;
+}
+
+.unit-title-container {
+    background-color: #CDF5FD;
+}
+
+.unit-sub-container, .unit-sub-title-container {
+    background-color: #FBF9F1;
+}
+
+.unit-details {
+    font-size: 18px;
+    height: max-content;
     margin: 0;
-    padding: 0;
-    background: #ffffff;
-    box-sizing: border-box;
 }
 
-.nav {
-    display: flex;
-    background-color: #192655;
-    color: white;
+.main-container {
+    padding: 2rem;
 }
 
-.logo {
-    width: 30%;
+.unit-title {
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.unit-sub-title {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.unit-sub-title-1 {
+    font-size: 34px;
+    font-weight: 500;
+}
+.unit-sub-title-2 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.unit-table {
+    width: 100%;
+    margin: 10px;
+}
+
+.unit-table, th, td {
+    border: 1px solid black;
+    background-color: white;
+}
+
+th, td {
+    text-align: center;
+    padding: 5px;
+}
+
+.table-left {
+    text-align: start;
+}
+
+.image-air {
+    width: 200px;
+    height: 200px;
+}
+
+.image-icon-air {
+    width: 100px;
+    height: 100px;
+}
+
+.image-service {
+    width: 300px;
+    height: 300px;
+}
+
+.image-center {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.nav ul {
-    list-style: none;
-    background-color: #192655;
-    width: 100%; 
+.image-service-table, .image-val-3-2 {
+    width: 300px;
+    height: 200px;
+}
+
+.image-service-icon, .w200h150 {
+    width: 200px;
+    height: 150px;
+}
+
+.image-single-table {
+    width: 400px;
+    height: 150px;
+}
+
+.image-single-structure-table, .image-double-structure-table {
+    width: 300px;
+    height: 200px;
+}
+
+.image-spring-back-table, .image-spring-table {
+    width: 200px;
+    height: 100px;
+}
+
+.image-single-work-table, .image-double-work-table {
+    width: 250px;
+    height: 250px;
+}
+
+.image-double-table, .w400h200, .w400h200 {
+    width: 400px;
+    height: 150px;
+}
+
+.image-double-icon-table {
+    width: 300px;
+    height: 150px;
+}
+
+.w80h80 {
+    width: 80px;
+    height: 80px;
+}
+
+.w100h50 {
+    width: 100px;
+    height: 50px;
+}
+
+.w250h150, .w250h350, .w250h200 {
+    width: 250px;
+    height: 150px;
+}
+
+.w250h350 {
+    height: 350px;
+}
+
+.w250h200 {
+    height: 200px;
+}
+
+.w400h200 {
+    height: 200px;
+}
+
+.w350h200 {
+    width: 350px;
+    height: 200px;
+}
+
+.w150h75, .w150h100 {
+    width: 150px;
+    height: 75px;
+}
+
+.w300h250 {
+    width: 350px;
+    height: 250px;
+}
+
+.w150h100 {
+    height: 100px;
+}
+
+.w225h125 {
+    width: 225px;
+    height: 125px;
+}
+
+.w175h175 {
+    width: 175px;
+    height: 175px;
+}
+
+.w270h220 {
+    width: 270px;
+    height: 220px;
+}
+
+.w220h220 {
+    width: 220px;
+    height: 220px;
+}
+
+.video-contanier {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 0; 
-    margin: 0;
 }
 
-.nav li {
-    font-size: 1.2em;
-    line-height: 40px;
-    text-align: center;   
-
+.unit-video {
+    width:750px ;
+    height:675px;
 }
 
-.nav a {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    padding-left: 7px;
-    border-bottom: 1px solid #888;
-    transition: .3s;
+@media (max-width: 768px) and (min-width:575px) {
+    .unit-title {
+        font-size: 30px;
+    }
+
+    .unit-sub-title {
+        font-size: 28px;
+    }
+
+    .unit-sub-title-1 {
+        font-size: 26px;
+    }
+
+    .unit-sub-title-2 {
+        font-size: 24px;
+    }
+
+    .unit-details {
+        font-size: 16px;
+        font-weight:400;
+    }
+
+    .image-air {
+        width: 150px;
+        height: 150px;
+    }
+    .image-service {
+        width: 250px;
+        height: 250px;
+    }
+    .image-service-table {
+        width: 250px;
+        height: 150px;
+    }
+    .image-service-icon {
+        width: 150px;
+        height: 100px;
+    }
+    .image-single-table, .image-single-structure-table {
+        width: 250px;
+        height: 100px;
+    }
+    .image-spring-back-table, .image-spring-table {
+        width: 150px;
+        height: 75px;
+    }
+
+    .image-single-structure-table, .image-single-work-table {
+        width: 200px;
+        height: 200px;
+    }
+    .image-double-table {
+        width: 300px;
+        height: 150px;
+    }
+    .image-double-structure-table {
+        width: 200px;
+        height: 150px;
+    }
+    .image-double-icon-table {
+        width: 200px;
+        height: 100px;
+    }
+    .image-double-work-table {
+        width: 200px;
+        height: 200px;
+    }
+    .w100h50 {
+        width: 100px;
+        height: 50px;
+    }
+    .image-val-3-2 {
+        width: 200px;
+        height: 150px;
+    }
+    .w250h200 {
+        width: 200px;
+        height: 150px;
+    }
+    .w400h200 {
+        width: 300px;
+        height: 200px;
+    }
+    .w350h200 {
+        width: 250px;
+        height: 150px;
+    }
+    .w300h250 {
+        width: 250px;
+        height: 150px;
+    }
 }
 
-.nav a:hover {
-    background-color: #b6b9c3;
-}
+@media (max-width: 575px) and (min-width:425px) {
+    .unit-container {
+        padding: 1rem;
+    }
 
-.nav li li {
-    font-size: .8em;
-}
+    .unit-title {
+        font-size: 28px;
+    }
 
-@media screen and (min-width: 650px) {
-.nav li {
-        width: 130px;
-        border-bottom: none;
-        height: 40px;
-        line-height: 40px;
-        font-size: 1.4em;
-        display: inline-block;
-        margin-right: -4px;
-}
-.nav a {
-        border-bottom: none;
-}
-.nav > ul > li {
-        text-align: center;
-        
-}
+    .unit-sub-title {
+        font-size: 26px;
+    }
 
-.nav > ul > li > a {
-        padding-left: 0;
-        
-}
+    .unit-sub-title-1 {
+        font-size: 24px;
+    }
 
-.nav li ul {
-        position: absolute;
-        display: none;
-        width: inherit;
-}
+    .unit-sub-title-2 {
+        font-size: 22px;
+    }
 
-.nav li:hover ul {
-        display: block;
-}
+    .unit-details {
+        font-size: 14px;
+        font-weight:400;
+    }
 
-.nav li ul li {
-        display: block;
-}
-}
+    .image-air {
+        width: 125px;
+        height: 125px;
+    }
+    .image-service {
+        width: 200px;
+        height: 200px;
+    }
+    .image-service-table {
+        width: 200px;
+        height: 100px;
+    }
+    .image-service-icon {
+        width: 125px;
+        height: 75px;
+    }
+    .image-single-table, .image-single-structure-table {
+        width: 200px;
+        height: 75px;
+    }
+    .image-spring-back-table, .image-spring-table {
+        width: 120px;
+        height: 65px;
+    }
 
-.teamsitems{
-    padding: 2rem;
-    background: #CDF5FD;
-    height: 50;
-}
-
-.teams-items {
-    padding: 2rem;
-    background: #FBF9F1;
-}
-
-.teams-items h4 {
-    font-size: 2rem;
-    width: 100%;
-    
-}
-.min {
-    padding: 2rem;
-    background: #FBF9F1;
-}
-.aa {
-    padding: 2rem;
-    background: #FBF9F1;
-}
-
-.aa h4 {
-   
-    font-size: 2rem;
-    width: 100%;
-}
-
-.aa h5 {
-    font-size: 2rem;
-    width: 100%;
-}
-
-.bb {
-    padding: 2rem;
-    background: #FBF9F1;
-}
-
-
-
-.bb h5 {
-    font-size: 2rem;
-    width: 100%;
-}
-
-.cc {
-    padding: 2rem;
-    background: #FBF9F1;
-}
-
-.cc h5 {
-    font-size: 2rem;
-    width: 100%;
-}
-
-.dd {
-    padding: 2rem;
-    background: #FBF9F1;
-}
-
-.dd h5 {
-    font-size: 2rem;
-    width: 100%;
-}
-
-.ee {
-    padding: 2rem;
-    background: #FBF9F1;
-}
-
-
-.ee h5 {
-    font-size: 2rem;
-    width: 100%;
-}
-
-.ff {
-    padding: 2rem;
-    background: #FBF9F1;
-}
-
-.ff h5 {
-    font-size: 2rem;
-    width: 100%;
-}
-
-.gg {
-    padding: 2rem;
-    background: #FBF9F1;
-}
-
-.gg h5 {
-    font-size: 2rem;
-    width: 100%;
-}
-
-.hh {
-    padding: 2rem;
-    background: #FBF9F1;
-}
-
-.hh h4 {
-    text-align: center;
-    font-size: 2rem;
-    width: 100%;
-}
-
-.hh h5 {
-    font-size: 2rem;
-    width: 100%;
-}
-
-.ii {
-    padding: 2rem;
-    background: #FBF9F1;
-}
-
-.ii h4 {
-    text-align: center;
-    font-size: 2rem;
-    width: 100%;
-}
-
-.ii h5 {
-    font-size: 2rem;
-    width: 100%;
-}
-
-.jj {
-    padding: 2rem;
-    background: #FBF9F1;
-}
-
-.jj h4 {
-    text-align: center;
-    font-size: 2rem;
-    width: 100%;
-}
-
-.jj h5 {
-    font-size: 2rem;
-    width: 100%;
-}
-
-.kk {
-    padding: 2rem;
-    background: #FBF9F1;
-}
-
-.kk h5 {
-    font-size: 2rem;
-    width: 100%;
-}
-
-.ll {
-    padding: 2rem;
-    background: #FBF9F1;
-}
-
-.ll h5 {
-    font-size: 2rem;
-    width: 100%;
-}
-
-.mm {
-    padding: 2rem;
-    background: #FBF9F1;
-}
-
-
-.img {
-    margin: auto auto;
-    display: block;
-}
-
-.concept img {
-    margin: auto auto;
-    display: block;
-}
-
-.content img {
-    margin: auto auto;
-    display: block;
-}
-
-.rr {
-    background: #FBF9F1
-}
-
-.table table-bordered th{
- 
-        width: 80%;
-        border: 1px solid black;
-        border-collapse: collapse;
-        padding: 15px;
- 
-}
-.button {
-    text-align: center;
-}
-
-.button a{
-        background-color: #192655;
-        color: white;
-        padding: 14px 25px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-}
-
-.button a:hover {
-    background-color: #b6b9c3;
-}
-
-
-
-footer {
-    background-color:  #192655;
-    color: #fff;
-    padding: .2rem;
-    text-align: center;
-    flex: 0 0 auto;
+    .image-single-structure-table, .image-single-work-table {
+        width: 150px;
+        height: 150px;
+    }
+    .image-double-table {
+        width: 225px;
+        height: 125px;
+    }
+    .image-double-structure-table {
+        width: 200px;
+        height: 150px;
+    }
+    .image-double-icon-table {
+        width: 200px;
+        height: 100px;
+    }
+    .image-double-work-table {
+        width: 200px;
+        height: 200px;
+    }
+    .w100h50 {
+        width: 100px;
+        height: 50px;
+    }
+    .image-val-3-2 {
+        width: 200px;
+        height: 150px;
+    }
+    .w250h200 {
+        width: 200px;
+        height: 150px;
+    }
+    .w400h200 {
+        width: 300px;
+        height: 200px;
+    }
+    .w350h200 {
+        width: 250px;
+        height: 150px;
+    }
+    .w300h250 {
+        width: 250px;
+        height: 150px;
+    }
 }

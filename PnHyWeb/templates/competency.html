@@ -7,20 +7,6 @@
 
 {% block content %}
 <style>
-    main {
-        height: 500px;
-        color: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: url(login.jpg);
-    }
-
-    .main-info {
-        text-align: center;
-        width: 650px;
-        height: 200px;
-    }
 
     .teams {
         display: grid;
@@ -36,24 +22,25 @@
         border-radius: 100%;
         width: 350px;
     }
-
-    footer {
-        background-color: #192655;
-        color: #fff;
-        padding: .2rem;
-        text-align: center;
-        flex: 0 0 auto;
-    }
 </style>
-<main>
-    <div class="header-info">
-        <p><img src="{% static 'image/login.jpg' %}" alt="" style="width:350px;height:350px;">
-        <h1>สมรรถนะ</h1>
-        <p>1. ผู้เรียนสามารถระบุสัญลักษณ์และชื่อชิ้นส่วนของอุปกรณ์นิวเมติกส์และได้<br>
-            2. ผู้เรียนสามารถอธิบายการทำงานของวงจรนิวเมติกส์จากแผนภาพไดอะแกรมได้<br>
-        </p>
+
+
+<div class="competency-header-info">
+    <div class="competency-capacity">
+        สมรรถนะ
     </div>
-</main>
+    <div class="competency-capacity-details">
+        1. ผู้เรียนสามารถระบุสัญลักษณ์และชื่อชิ้นส่วนของอุปกรณ์นิวเมติกส์และได้<br>
+        2. ผู้เรียนสามารถอธิบายการทำงานของวงจรนิวเมติกส์จากแผนภาพไดอะแกรมได้
+    </div>
+</div>
+
+<!-- <main>
+    <div class="header-info">
+
+
+    </div>
+</main> -->
 
 <section class="teams">
     <div class="teams-items">

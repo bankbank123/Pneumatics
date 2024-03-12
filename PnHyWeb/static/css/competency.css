@@ -1,0 +1,27 @@
+.competency-header-info {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../image/login.jpg);
+    background-size: cover;
+    background-position: 100%;
+}
+
+.competency-capacity, .competency-capacity-details {
+    max-width: max-content;
+    height: max-content;
+    color: rgb(255, 255, 255);
+}
+
+.competency-capacity {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.competency-capacity-details {
+    font-size: 18px;
+    font-weight: 600;
+}
