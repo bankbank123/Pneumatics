@@ -16,7 +16,7 @@
 <body>
 
     <div class="navbar-container d-flex flex-row justify-content-between align-items-center">
-        <div class="navbar-logo d-flex mw-100 align-items-center">
+        <div class="navbar-logo d-flex mw-100 align-items-center" >
             Pnuematics
         </div>
         <div class="narbar-link-container">
@@ -87,11 +87,6 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-
-    const onClickLinkHomePage = () => {
-        window.location.href = "{% url 'home' %}";
-    }
-
     const handleResize = () => {
         let windowWidth = window.innerWidth;
         const drawer_container = document.getElementById('drawer-container');
@@ -142,6 +137,7 @@
         const unit_container = document.getElementById('navbar-link-unit-container')
         unit_container.style.display = "none"
     }
+
 
 </script>
 

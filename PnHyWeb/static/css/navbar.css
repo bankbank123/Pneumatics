@@ -28,6 +28,7 @@ body {
     min-height: 100%;
     font-weight: 800;
     cursor: pointer;
+    z-index: 999;
 }
 
 .narbar-link-container,
