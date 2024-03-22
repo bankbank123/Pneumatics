@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}
-<title>Unit1</title>
+
+<head>
+    <title>Unit1</title>
+</head>
 {% endblock %}
 
 {% block content %}
 
 <body>
-    <div class="unit1-container">
+    <div class="unit-big-container">
 
         <section class="teams">
             <div class="unit-title-container unit-container">
@@ -79,10 +82,10 @@
                     </tbody>
                     <tr>
                         <td>
-                            <img class="image-air" src="{% static 'image/ถังลม.png' %}" alt="">
+                            <img class="image-air" src="{% static 'image/ถังลม.png' %}" alt="Not Found">
                         </td>
                         <td>
-                            <img class="image-icon-air" src="{% static 'image/สัญลักษณ์ถังลม.png' %}" alt="">
+                            <img class="image-icon-air" src="{% static 'image/สัญลักษณ์ถังลม.png' %}" alt="Not Found">
                         </td>
                     </tr>
                     </tbody>
@@ -117,7 +120,7 @@
                     ชุดควบคุมและปรับปรุงคุณภาพลมอัด (Service Unit)
                 </p>
                 <div class="image-center">
-                    <img class="image-service" src="{% static 'image/se.png' %}" alt="">
+                    <img class="image-service" src="{% static 'image/se.png' %}" alt="Not Found">
                 </div>
 
                 <p class="unit-details">
@@ -151,11 +154,10 @@
                     </tbody>
                     <tr>
                         <td>
-                            <img class="image-service-table" src="{% static 'image/Su.png' %}" alt="" width="300"
-                                height="200">
+                            <img class="image-service-table" src="{% static 'image/Su.png' %}" alt="Not Found">
                         </td>
                         <td>
-                            <img class="image-service-icon" src="{% static 'image/ย่อ.png' %}" alt="">
+                            <img class="image-service-icon" src="{% static 'image/ย่อ.png' %}" alt="Not Found">
                         </td>
                     </tr>
                     </tbody>
@@ -170,7 +172,7 @@
                     <thead>
                         <tr>
                             <th>
-                                <img class="image-single-table" src="{% static 'image/ทางเดียว.png' %}">
+                                <img class="image-single-table" src="{% static 'image/ทางเดียว.png' %}" alt="Not Found">
                             </th>
                             <td class="table-left">
                                 <p class="unit-details">
@@ -186,7 +188,7 @@
                         <tr>
                             <td>
                                 <img class="image-single-structure-table"
-                                    src="{% static 'image/โครงสร้างทางเดียว.png' %}">
+                                    src="{% static 'image/โครงสร้างทางเดียว.png' %}" alt="Not Found">
                             </td>
                             <td class="table-left">
                                 <p class="unit-details">
@@ -205,12 +207,13 @@
                         </tr>
                         <tr>
                             <td>
-                                <img class="image-spring-back-table"
-                                    src="{% static 'image/ถอยกลับด้วยสปริง.png' %}"><br>
+                                <img class="image-spring-back-table" src="{% static 'image/ถอยกลับด้วยสปริง.png' %}"
+                                    alt="Not Found"><br>
                                 <p class="unit-details">
                                     แบบถอยกลับด้วยสปริง
                                 </p>
-                                <img class="image-spring-table" src="{% static 'image/เลื่อนออกด้วยสปริง.png' %}">
+                                <img class="image-spring-table" src="{% static 'image/เลื่อนออกด้วยสปริง.png' %}"
+                                    alt="Not Found">
                                 <p class="unit-details">
                                     แบบเลื่อนออกด้วยสปริง
                                 </p>
@@ -223,7 +226,7 @@
                         <tr>
                             <td>
                                 <img class="image-single-work-table" src="{% static 'image/การทำงานทางเดียว.png' %}"
-                                    width="250" height="250">
+                                    alt="Not Found">
                             </td>
                             <td class="table-left">
                                 <p class="unit-details">
@@ -248,7 +251,7 @@
                     <thead>
                         <tr>
                             <td>
-                                <img class="image-double-table " src="{% static 'image/สองทาง.png' %}">
+                                <img class="image-double-table " src="{% static 'image/สองทาง.png' %}" alt="Not Found">
                             </td>
                             <td class="table-left">
                                 <p class="unit-details">
@@ -262,8 +265,8 @@
                     <tbody>
                         <tr>
                             <td>
-                                <img class="image-double-structure-table"
-                                    src="{% static 'image/โครงสร้างสองทาง.png' %}">
+                                <img class="image-double-structure-table" src="{% static 'image/โครงสร้างสองทาง.png' %}"
+                                    alt="Not Found">
                             </td>
                             <td class="table-left">
                                 <p class="unit-details">
@@ -283,7 +286,8 @@
                         </tr>
                         <tr>
                             <td>
-                                <img class="image-double-icon-table" src="{% static 'image/สัญลักษณ์สองทาง.png' %}">
+                                <img class="image-double-icon-table" src="{% static 'image/สัญลักษณ์สองทาง.png' %}"
+                                    alt="Not Found">
                             </td>
                             <td>
                                 <p class="unit-details">สัญลักษณ์</p>
@@ -292,7 +296,7 @@
                         <tr>
                             <td>
                                 <img class="image-double-work-table" src="{% static 'image/การทำงานสองทาง.png' %}"
-                                    width="250" height="250">
+                                    alt="Not Found">
                             </td>
                             <td>
                                 <p class="unit-details">
@@ -330,7 +334,8 @@
                     <tbody>
                         <tr>
                             <td>
-                                <img class="image-rec-table w80h80" src="{% static 'image/สี่เหลี่ยม.png' %}">
+                                <img class="image-rec-table w80h80" src="{% static 'image/สี่เหลี่ยม.png' %}"
+                                    alt="Not Found">
                             </td>
                             <td>
                                 <p class="unit-details">รูปสี่เหลี่ยม</p>
@@ -344,7 +349,8 @@
 
                     <tr>
                         <td>
-                            <img class="image-rec-2-table w80h80" src="{% static 'image/สี่เหลี่ยมสองช่อง.png' %}">
+                            <img class="image-rec-2-table w80h80" src="{% static 'image/สี่เหลี่ยมสองช่อง.png' %}"
+                                alt="Not Found">
                         <td>
                             <p class="unit-details">รูปสี่เหลี่ยม 2 รูปต่อกัน</p>
                         </td>
@@ -354,9 +360,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <img class="image-rec-3-table w80h80" src="{% static 'image/สี่เหลี่ยมสามช่อง.png' %}">
+                            <img class="image-rec-3-table w80h80" src="{% static 'image/สี่เหลี่ยมสามช่อง.png' %}"
+                                alt="Not Found">
                         <td>
-                            <p class="unit-details">รูปสี่เหลี่ยม 3 รูปต่อกัน</p>>
+                            <p class="unit-details">รูปสี่เหลี่ยม 3 รูปต่อกัน</p>
                         </td>
                         <td>
                             <p class="unit-details">วาล์วสามตำแหน่ง</p>
@@ -365,7 +372,7 @@
                     <tr>
                         <td>
                             <img class="image-rec-arrow-table w80h80"
-                                src="{% static 'image/ลูกศรในช่องสี่เหลี่ยม.png' %}">
+                                src="{% static 'image/ลูกศรในช่องสี่เหลี่ยม.png' %}" alt="Not Found">
                         <td>
                             <p class="unit-details">ลูกศรภายในช่องสี่เหลี่ยม</p>
 
@@ -376,8 +383,8 @@
                     </tr>
                     <tr>
                         <td>
-                            <img class="image-rec-line-table w80h80"
-                                src="{% static 'image/เส้นในช่องสี่เหลี่ยม.png' %}">
+                            <img class="image-rec-line-table w80h80" src="{% static 'image/เส้นในช่องสี่เหลี่ยม.png' %}"
+                                alt="Not Found">
                         <td>
                             <p class="unit-details">เส้นภายในช่องสี่เหลี่ยม</p>
                         </td>
@@ -388,7 +395,7 @@
                     <tr>
                         <td>
                             <img class="image-rec-crossline-table w80h80"
-                                src="{% static 'image/เส้นตัดในช่องสี่เหลี่ยม.png' %}">
+                                src="{% static 'image/เส้นตัดในช่องสี่เหลี่ยม.png' %}" alt="Not Found">
                         <td>
                             <p class="unit-details">เส้นตัดภายในช่องสี่เหลี่ยมมีจุด</p>
                         </td>
@@ -399,7 +406,7 @@
                     <tr>
                         <td>
                             <img class="image-rec-crossline-nopoint-table w80h80"
-                                src="{% static 'image/เส้นตัดในช่องไม่มีจุด.png' %}">
+                                src="{% static 'image/เส้นตัดในช่องไม่มีจุด.png' %}" alt="Not Found">
                         <td>
                             <p class="unit-details">เส้นตัดภายในช่องสีเหลี่ยมไม่มีจุด</p>
                         </td>
@@ -428,7 +435,8 @@
 
                     <tr>
                         <td>
-                            <img class="image-general-table w100h50" src="{% static 'image/ทั่วไป.png' %}">
+                            <img class="image-general-table w100h50" src="{% static 'image/ทั่วไป.png' %}"
+                                alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">สัญลักษณ์ทั่วไป ซึ่งใช้แทนการทำงานโดยใช้กล้ามเนื้อ</p>
@@ -436,14 +444,16 @@
                     </tr>
                     <tr>
                         <td>
-                            <img class="image-press-table w100h50" src="{% static 'image/ใช้มือกด.png' %}">
+                            <img class="image-press-table w100h50" src="{% static 'image/ใช้มือกด.png' %}"
+                                alt="Not Found">
                         <td>
                             <p class="unit-details">ใช้มือกด (Push Button) </p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <img class="image-lever-table w100h50" src="{% static 'image/ใช้คันโยก.png' %}">
+                            <img class="image-lever-table w100h50" src="{% static 'image/ใช้คันโยก.png' %}"
+                                alt="Not Found">
                         <td>
                             <p class="unit-details">ใช้คันโยก (Lever)</p>
                         </td>
@@ -451,7 +461,8 @@
 
                     <tr>
                         <td>
-                            <img class="image-pedal-table w100h50" src="{% static 'image/ใช้เท้าเหยียบ.png' %}">
+                            <img class="image-pedal-table w100h50" src="{% static 'image/ใช้เท้าเหยียบ.png' %}"
+                                alt="Not Found">
                         <td>
                             <p class="unit-details">ใช้เท้าเหยียบ (Pedal)</p>
                         </td>
@@ -459,7 +470,8 @@
                     </tr>
                     <tr>
                         <td>
-                            <img class="image-detent-table w100h50" src="{% static 'image/ใช้มือกดล็อก.png' %}">
+                            <img class="image-detent-table w100h50" src="{% static 'image/ใช้มือกดล็อก.png' %}"
+                                alt="Not Found">
                         <td>
                             <p class="unit-details">ใช้มือกดแบบมีตัวล็อกตำแหน่ง (Detent)</p>
                         </td>
@@ -480,7 +492,8 @@
                     </tr>
                     <tr>
                         <td>
-                            <img class="image-plunger-table w100h50" src="{% static 'image/กลไกภายนอก.png' %}">
+                            <img class="image-plunger-table w100h50" src="{% static 'image/กลไกภายนอก.png' %}"
+                                alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">ใช้กลไกภายนอกเป็นตัวกด (Plunger)</p>
@@ -489,7 +502,8 @@
 
                     <tr>
                         <td>
-                            <img class="image-spring-table w100h50" src="{% static 'image/สปริงดัน.png' %}">
+                            <img class="image-spring-table w100h50" src="{% static 'image/สปริงดัน.png' %}"
+                                alt="Not Found">
                         <td>
                             <p class="unit-details">ใช้สปริงดันให้อยู่ในตำแหน่งปกติ (Spring)</p>
                         </td>
@@ -498,7 +512,7 @@
                     <tr>
                         <td>
                             <img class="image-roller-lever-table w100h50"
-                                src="{% static 'image/ลูกกลิ้งทำงาน 2 ด้าน.png' %}">
+                                src="{% static 'image/ลูกกลิ้งทำงาน 2 ด้าน.png' %}" alt="Not Found">
                         <td>
                             <p class="unit-details">แบบลูกกลิ้งทำงาน 2 ด้าน (Roller Lever)</p>
                         </td>
@@ -506,7 +520,7 @@
                     <tr>
                         <td>
                             <img class="image-roller-trip-table w100h50"
-                                src="{% static 'image/ลูกกลิ้งทำงานด้านเดียว.png' %}">
+                                src="{% static 'image/ลูกกลิ้งทำงานด้านเดียว.png' %}" alt="Not Found">
                         <td>
                             <p class="unit-details">แบบลูกกลิ้งทำงานด้านเดียว (Roller Lever with Idle Return or Roller
                                 Trip)
@@ -529,7 +543,8 @@
                     </tr>
                     <tr>
                         <td>
-                            <img class="image-apple-p-table w100h50" src="{% static 'image/ลมดัน.png' %}">
+                            <img class="image-apple-p-table w100h50" src="{% static 'image/ลมดัน.png' %}"
+                                alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">ใช้ลมดันให้วาล์วเลื่อนโดยตรง (Apply Pressure)</p>
@@ -538,7 +553,8 @@
 
                     <tr>
                         <td>
-                            <img class="image-release-p-table w100h50" src="{% static 'image/ระบายลมทิ้ง.png' %}">
+                            <img class="image-release-p-table w100h50" src="{% static 'image/ระบายลมทิ้ง.png' %}"
+                                alt="Not Found">
                         <td>
                             <p class="unit-details">ระบายลมทิ้งให้วาล์วเลื่อนโดยตรง (Release Pressure)</p>
                         </td>
@@ -547,7 +563,7 @@
                     <tr>
                         <td>
                             <img class="image-difference-p-table w100h50"
-                                src="{% static 'image/เลื่อนด้วยความดัน.png' %}">
+                                src="{% static 'image/เลื่อนด้วยความดัน.png' %}" alt="Not Found">
                         <td>
                             <p class="unit-details">เลื่อนด้วยความดันที่ต่างกัน (Difference Pressure)</p>
                         </td>
@@ -555,7 +571,8 @@
 
                     <tr>
                         <td>
-                            <img class="image-p-apply-table w100h50" src="{% static 'image/วาล์วเลื่อนทางอ้อม.png' %}">
+                            <img class="image-p-apply-table w100h50" src="{% static 'image/วาล์วเลื่อนทางอ้อม.png' %}"
+                                alt="Not Found">
                         <td>
                             <p class="unit-details">ใช้ลมดันให้วาล์วเลื่อนทางอ้อม (Pressure Apply to Pilot Valve)</p>
                         </td>
@@ -564,7 +581,7 @@
                     <tr>
                         <td>
                             <img class="image-p-remove-table w100h50"
-                                src="{% static 'image/ระบายลมทิ้งให้วาล์วเลื่อนทางอ้อม.png' %}">
+                                src="{% static 'image/ระบายลมทิ้งให้วาล์วเลื่อนทางอ้อม.png' %}" alt="Not Found">
                         <td>
                             <p class="unit-details">ระบายลมทิ้งให้วาล์วเลื่อนทางอ้อม (Pressure Removed from Pilot Valve)
                             </p>
@@ -587,7 +604,8 @@
 
                     <tr>
                         <td>
-                            <img class="image-inductor-table w100h50" src="{% static 'image/ขดลวด 1 ขด.png' %}">
+                            <img class="image-inductor-table w100h50" src="{% static 'image/ขดลวด 1 ขด.png' %}"
+                                alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">ใช้แม่เหล็กไฟฟ้า มีขดลวด 1 ขด</p>
@@ -597,7 +615,7 @@
                     <tr>
                         <td>
                             <img class="image-inductor-sameway-table w100h50"
-                                src="{% static 'image/ขดลวดหลายทิศเดียวกัน.png' %}">
+                                src="{% static 'image/ขดลวดหลายทิศเดียวกัน.png' %}" alt="Not Found">
                         <td>
                             <p class="unit-details">ใช้แม่เหล็กไฟฟ้า มีขดลวดหลายขดทำงานในทิศทางเดียวกัน</p>
                         </td>
@@ -606,7 +624,7 @@
                     <tr>
                         <td>
                             <img class="image-inductor-diffway-table w100h50"
-                                src="{% static 'image/ขดลวดหลายขดทิศตรงกันข้าม.png' %}">
+                                src="{% static 'image/ขดลวดหลายขดทิศตรงกันข้าม.png' %}" alt="Not Found">
                         <td>
                             <p class="unit-details">ใช้แม่เหล็กไฟฟ้า มีขดลวดหลายขดทำงานในทิศทางตรงข้ามกัน</p>
                         </td>
@@ -627,7 +645,8 @@
                     </tr>
                     <tr>
                         <td>
-                            <img class="image-elec-table w100h50" src="{% static 'image/แม่เหล็กไฟฟ้าและลมดัน.png' %}">
+                            <img class="image-elec-table w100h50" src="{% static 'image/แม่เหล็กไฟฟ้าและลมดัน.png' %}"
+                                alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">ใช้แม่เหล็กไฟฟ้าและลมดันช่วยภายในวาล์ว</p>
@@ -637,7 +656,7 @@
                     <tr>
                         <td>
                             <img class="image-roller-air-table w100h50"
-                                src="{% static 'image/กลไกลูกกลิ้งและลมดัน.png' %}">
+                                src="{% static 'image/กลไกลูกกลิ้งและลมดัน.png' %}" alt="Not Found">
                         <td>
                             <p class="unit-details">ใช้กลไกลูกกลิ้งและลมดันช่วยภายในวาล์ว</p>
                         </td>
@@ -645,8 +664,8 @@
 
                     <tr>
                         <td>
-                            <img class="image-elec-table w100h50"
-                                src="{% static 'image/เลื่อนด้วยแม่เหล็กไฟฟ้า.png' %}">
+                            <img class="image-elec-table w100h50" src="{% static 'image/เลื่อนด้วยแม่เหล็กไฟฟ้า.png' %}"
+                                alt="Not Found">
                         <td>
                             <p class="unit-details">ใช้เลื่อนด้วยแม่เหล็กไฟฟ้าหรือลมดันช่วยในวาล์ว</p>
                         </td>
@@ -662,7 +681,7 @@
                     วาล์วบังคับทิศทางแบบ 3/2
                 </h4>
                 <div class="image-center">
-                    <img class="image-val-3-2" src="{% static 'image/32.png' %}" alt="" width="300" height="200">
+                    <img class="image-val-3-2" src="{% static 'image/32.png' %}" alt="Not Found">
                 </div>
                 <p class="unit-sub-title-2">
                     1. วาล์วแบบ 3/2 ปกติปิด บังคับการทำงานด้วยมือและกลับด้วยสปริง
@@ -670,7 +689,7 @@
                 <table class="unit-table">
                     <tr>
                         <td>
-                            <img class="w250h150" src="{% static 'image/สัญลักษณ์ 32ปกติปิด.png' %}">
+                            <img class="w250h150" src="{% static 'image/สัญลักษณ์ 32ปกติปิด.png' %}" alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">สัญลักษณ์</p>
@@ -680,7 +699,7 @@
 
                     <tr>
                         <td>
-                            <img class="w250h350" src="{% static 'image/การทำงาน 32 ปกติปิด.png' %}">
+                            <img class="w250h350" src="{% static 'image/การทำงาน 32 ปกติปิด.png' %}" alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">การทำงาน <br>
@@ -698,7 +717,8 @@
                     <tr>
                         <td>
                             <img class="w250h150"
-                                src="{% static 'image/สัญลักษณ์32 ปกติปิด บังคับการทำงานด้วยกลไก.png' %}">
+                                src="{% static 'image/สัญลักษณ์32 ปกติปิด บังคับการทำงานด้วยกลไก.png' %}"
+                                alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">สัญลักษณ์</p>
@@ -708,7 +728,8 @@
                     <tr>
                         <td>
                             <img class="w250h350"
-                                src="{% static 'image/การทำงาน 32ปกติปิด บังคับการทำงานด้วยกลไก.png' %}">
+                                src="{% static 'image/การทำงาน 32ปกติปิด บังคับการทำงานด้วยกลไก.png' %}"
+                                alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">
@@ -726,7 +747,7 @@
                     วาล์วบังคับทิศทางแบบ 5/2
                 </h4>
                 <div class="image-center">
-                    <img class="w250h200" src="{% static 'image/52n.png' %}" alt="" width="250" height="200">
+                    <img class="w250h200" src="{% static 'image/52n.png' %}" alt="Not Found">
                 </div>
                 <p class="unit-sub-title-2">
                     1.วาล์วบังคับทิศทางลมแบบ 5/2 บังคับการทำงานด้วยมือและกลับด้วยสปริง
@@ -734,7 +755,7 @@
                 <table class="unit-table">
                     <tr>
                         <td>
-                            <img class="w200h150" src="{% static 'image/แบบ 52 ทำงานด้วยมือ.png' %}">
+                            <img class="w200h150" src="{% static 'image/แบบ 52 ทำงานด้วยมือ.png' %}" alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">สัญลักษณ์</p>
@@ -743,7 +764,7 @@
 
                     <tr>
                         <td>
-                            <img class="w250h350" src="{% static 'image/การทำงาน 52 ด้วยมือ.png' %}">
+                            <img class="w250h350" src="{% static 'image/การทำงาน 52 ด้วยมือ.png' %}" alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">
@@ -760,7 +781,7 @@
                 <table class="unit-table ">
                     <tr>
                         <td>
-                            <img class="w200h150" src="{% static 'image/แบบ 52 ทำงานด้วยลม.png' %}">
+                            <img class="w200h150" src="{% static 'image/แบบ 52 ทำงานด้วยลม.png' %}" alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">สัญลักษณ์</p>
@@ -769,7 +790,7 @@
 
                     <tr>
                         <td>
-                            <img class="w250h350" src="{% static 'image/การทำงาน 52 ด้วยลม.png' %}">
+                            <img class="w250h350" src="{% static 'image/การทำงาน 52 ด้วยลม.png' %}" alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">
@@ -787,7 +808,7 @@
                     วาล์วควบคุมแบบลูกกลิ้ง (Roller)
                 </h5>
                 <div class="image-center">
-                    <img class="w400h200" src="{% static 'image/Rollers.png' %}" alt="" width="400" height="200">
+                    <img class="w400h200" src="{% static 'image/Rollers.png' %}" alt="Not Found">
                 </div>
 
                 <p class="unit-details">
@@ -797,7 +818,7 @@
                 <table class="unit-table">
                     <tr>
                         <td>
-                            <img class="w200h150" src="{% static 'image/สัญลักษณ์ลูกกลิ้ง.png' %}">
+                            <img class="w200h150" src="{% static 'image/สัญลักษณ์ลูกกลิ้ง.png' %}" alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">สัญลักษณ์</p>
@@ -805,8 +826,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <img class="w350h200" src="{% static 'image/การทำงานRoller.png' %}" width="350"
-                                height="200">
+                            <img class="w350h200" src="{% static 'image/การทำงานRoller.png' %}" alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">
@@ -829,13 +849,13 @@
                 </p>
                 <table class="unit-table">
                     <tr>
-                        <td>
-                            <img class="w150h75" src="{% static 'image/กันกลับแบบไม่มีสปริง1.png' %}">
-                            <p class="unit-details">
+                        <td class="table-center">
+                            <img class="w150h75" src="{% static 'image/กันกลับแบบไม่มีสปริง1.png' %}" alt="Not Found">
+                            <p class="unit-details" style="width: max-content;">
                                 แบบไม่มีสปริง
                             </p>
-                            <img class="w150h75" src="{% static 'image/กันกลับแบบมีสปริง1.png' %}">
-                            <p class="unit-details">
+                            <img class="w150h75" src="{% static 'image/กันกลับแบบมีสปริง1.png' %}" alt="Not Found">
+                            <p class="unit-details" style="width: max-content;">
                                 แบบมีสปริง
                             </p>
                         </td>
@@ -846,7 +866,7 @@
 
                     <tr>
                         <td>
-                            <img class="w300h250" src="{% static 'image/การทำงานวาล์วกันกลับ1.png' %}">
+                            <img class="w300h250 rotate-90" src="{% static 'image/การทำงานวาล์วกันกลับ1.png' %}" alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">
@@ -865,8 +885,7 @@
                     วาล์วกันกลับสองทาง (Shuttle Valve)
                 </h5>
                 <div class="image-center">
-                    <img class="w250h200" src="{% static 'image/วาล์วกันกลับสองทาง1.png' %}" alt="" width="250"
-                        height="200">
+                    <img class="w250h200" src="{% static 'image/วาล์วกันกลับสองทาง1.png' %}" alt="Not Found">
                 </div>
 
                 <p class="unit-details">
@@ -877,7 +896,8 @@
                 <table class="unit-table">
                     <tr>
                         <td>
-                            <img class="w150h100" src="{% static 'image/สัญลักษณ์วาล์วกันกลับสองทาง1.png' %}">
+                            <img class="w150h100" src="{% static 'image/สัญลักษณ์วาล์วกันกลับสองทาง1.png' %}"
+                                alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">สัญลักษณ์</p>
@@ -885,8 +905,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <img class="w250h150" src="{% static 'image/การทำงานวาล์วกันกลับสองทาง1.png' %}">
-                            <img class="w250h150" src="{% static 'image/การทำงานวาล์วกันกลับสองทาง2.png' %}">
+                            <img class="w250h150" src="{% static 'image/การทำงานวาล์วกันกลับสองทาง1.png' %}"
+                                alt="Not Found">
+                            <img class="w250h150" src="{% static 'image/การทำงานวาล์วกันกลับสองทาง2.png' %}"
+                                alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">
@@ -903,7 +925,7 @@
                     วาล์วควบคุมอัตราการไหลทางเดียว (One-Way Flow Control Valve)
                 </h5>
                 <div class="image-center"><img class="w250h200"
-                        src="{% static 'image/วาล์วควบคุมอัตราการไหลทางเดียว1.png' %}"></div>
+                        src="{% static 'image/วาล์วควบคุมอัตราการไหลทางเดียว1.png' %}" alt="Not Found">></div>
 
                 <p class="unit-details">
                     วาล์วชนิดนี้สามารถควบคุมอัตราการไหลของความดันลมได้เพียงทิศทางเดียว
@@ -913,7 +935,7 @@
                     <tr>
                         <td>
                             ><img class="w200h150"
-                                src="{% static 'image/สัญลักษณ์วาล์วควบคุมอัตราการไหลทางเดียว1.png' %}">
+                                src="{% static 'image/สัญลักษณ์วาล์วควบคุมอัตราการไหลทางเดียว1.png' %}" alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">สัญลักษณ์</p>
@@ -922,9 +944,10 @@
 
                     <tr>
                         <td>
-                            <img class="w225h125"
-                                src="{% static 'image/การทำงานวาล์วควบคุมอัตราการไหลทางเดียว1.png' %}">
-                            <img class="w225h125" src="{% static 'image/การทำงานอัตราการไหลทางเดียว.png' %}">
+                            <img class="w225h125" src="{% static 'image/การทำงานวาล์วควบคุมอัตราการไหลทางเดียว1.png' %}"
+                                alt="Not Found">
+                            <img class="w225h125" src="{% static 'image/การทำงานอัตราการไหลทางเดียว.png' %}"
+                                alt="Not Found">
 
                         </td>
                         <td>
@@ -940,7 +963,8 @@
                 <h5 class="unit-sub-title-1">
                     วาล์วเร่งระบายลม (Quick Exhaust Valve)
                 </h5>
-                <div class="image-center"><img class="w250h200" src="{% static 'image/วาล์วเร่งระบายลม1.png' %}"></div>
+                <div class="image-center"><img class="w250h200" src="{% static 'image/วาล์วเร่งระบายลม1.png' %}"
+                        alt="Not Found"></div>
                 <p class="unit-details">
                     วาล์วเร่งระบายลม มีหน้าที่ ช่วยระบายลมออกจากอุปกรณ์ สู่ภายนอกอย่างรวดเร็ว
                     เพื่อเพิ่มความเร็วในการเคลื่อนที่ของลูกสูบ
@@ -948,7 +972,8 @@
                 <table class="unit-table">
                     <tr>
                         <td>
-                            <img class="w175h175" src="{% static 'image/สัญลักษณ์วาล์วเร่งระบายลม1.png' %}">
+                            <img class="w175h175" src="{% static 'image/สัญลักษณ์วาล์วเร่งระบายลม1.png' %}"
+                                alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">สัญลักษณ์</p>
@@ -956,8 +981,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <img class="w175h175" src="{% static 'image/การทำงานวาล์วเร่งระบายลม1.png' %}">
-                            <img class="w175h175" src="{% static 'image/การทำงานวาล์วเร่งระบายลม2.png' %}">
+                            <img class="w175h175" src="{% static 'image/การทำงานวาล์วเร่งระบายลม1.png' %}"
+                                alt="Not Found">
+                            <img class="w175h175" src="{% static 'image/การทำงานวาล์วเร่งระบายลม2.png' %}"
+                                alt="Not Found">
 
                         </td>
                         <td>
@@ -976,7 +1003,7 @@
                     วาล์วความดันสองทาง (Two Pressure Valve)
                 </h5>
                 <div class="image-center">
-                    <img class="w250h200" src="{% static 'image/วาล์วความดันสองทาง1_.png' %}">
+                    <img class="w250h200" src="{% static 'image/วาล์วความดันสองทาง1_.png' %}" alt="Not Found">
                 </div>
                 <p class="unit-details">
                     วาล์วชนิดนี้มีท่อลมเข้าสองทางและท่อลมออกหนึ่งทาง ประโยชน์ของวาล์วชนิดนี้ คือ
@@ -986,7 +1013,8 @@
                 <table class="unit-table">
                     <tr>
                         <td>
-                            <img class="w150h75" src="{% static 'image/สัญลักษณ์วาล์วความดันสองทาง1.png' %}">
+                            <img class="w150h75" src="{% static 'image/สัญลักษณ์วาล์วความดันสองทาง1.png' %}"
+                                alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">สัญลักษณ์</p>
@@ -994,8 +1022,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <img class="w225h125" src="{% static 'image/การทำงานวาล์วความดันสองทาง1.png' %}">
-                            <img class="w225h125" src="{% static 'image/การทำงานวาล์วความดันสองทาง2.png' %}">
+                            <img class="w225h125" src="{% static 'image/การทำงานวาล์วความดันสองทาง1.png' %}"
+                                alt="Not Found">
+                            <img class="w225h125" src="{% static 'image/การทำงานวาล์วความดันสองทาง2.png' %}"
+                                alt="Not Found">
                         </td>
                         </td>
                         <td>
@@ -1013,7 +1043,8 @@
                 <h5 class="unit-sub-title-1">
                     วาล์วหน่วงเวลา (Time Delay Valve)
                 </h5>
-                <div class="image-center"><img class="w270h220" src="{% static 'image/วาล์วหน่วงเวลา1.png' %}"></div>
+                <div class="image-center"><img class="w270h220" src="{% static 'image/วาล์วหน่วงเวลา1.png' %}"
+                        alt="Not Found"></div>
 
                 <p class="unit-details">
                     วาล์วหน่วงเวลา มีหน้าที่ ควบคุมการทำงานของก้านสูบให้เคลื่อนที่กลับ ซึ่งสามารถปรับตั้งเวลา
@@ -1025,7 +1056,8 @@
                 <table class="unit-table">
                     <tr>
                         <td>
-                            <img class="w400h200" src="{% static 'image/สัญลักษณ์วาล์วหน่วงเวลาแบบปกติเปิด1.png' %}">
+                            <img class="w400h200" src="{% static 'image/สัญลักษณ์วาล์วหน่วงเวลาแบบปกติเปิด1.png' %}"
+                                alt="Not Found">
                         </td>
                         <td>
                             <p class="unit-details">สัญลักษณ์</p>
@@ -1033,18 +1065,24 @@
                     </tr>
 
                     <tr>
-                        <td>
-                            <img class="w220h220" src="{% static 'image/การทำงานวาล์วหน่วงเวลาแบบปกติเปิด1.png' %}">
-                            <img class="w220h220" src="{% static 'image/การทำงานวาล์วหน่วงเวลาแบบปกติเปิด2.png' %}"">
+                        <td class="row-2">
+
+                            <img class="w220h220" src="{% static 'image/การทำงานวาล์วหน่วงเวลาแบบปกติเปิด1.png' %}"
+                                alt="Not Found">
+                            <img class="w220h220" src="{% static 'image/การทำงานวาล์วหน่วงเวลาแบบปกติเปิด2.png' %}"
+                                alt="Not Found">
+
+
                         </td>
                         <td>
                             <p class=" unit-details">
-                            การทำงาน <br>
-                            สภาวะปกติ เมื่อยังไม่มีแรงดันลมเข้าทางรู 10 แรงดันลมจากรู 1 จะถูกปิด ส่วนรู 2 จะต่อถึงรู
-                            3<br>
-                            สภาวะทำงาน เมื่อมีแรงดันลมเข้าทางรู 10
-                            ลมอัดจะถูกควบคุมให้ไหลผ่านเฉพาะวาล์วควบคุมการไหลจนปริมาณลมเต็มถังเก็บลม
-                            แรงดันลมจะไปดันเลื่อนให้วาล์ว 3/2 ปิด ลมจากรู 1 จึงถูกปิด ส่วนลมจากรู 2 จะต่อถึงรู 3 ได้</p>
+                                การทำงาน <br>
+                                สภาวะปกติ เมื่อยังไม่มีแรงดันลมเข้าทางรู 10 แรงดันลมจากรู 1 จะถูกปิด ส่วนรู 2 จะต่อถึงรู
+                                3<br>
+                                สภาวะทำงาน เมื่อมีแรงดันลมเข้าทางรู 10
+                                ลมอัดจะถูกควบคุมให้ไหลผ่านเฉพาะวาล์วควบคุมการไหลจนปริมาณลมเต็มถังเก็บลม
+                                แรงดันลมจะไปดันเลื่อนให้วาล์ว 3/2 ปิด ลมจากรู 1 จึงถูกปิด ส่วนลมจากรู 2 จะต่อถึงรู 3 ได้
+                            </p>
                         </td>
                     <tr>
                 </table>
@@ -1055,16 +1093,19 @@
                 <table class="unit-table">
                     <tr>
                         <td>
-                            <img class="w400h200" src="{% static 'image/สัญลักษณ์วาล์วหน่วงเวลาแบบปกติปิด1.png' %}">
+                            <img class="w400h200" src="{% static 'image/สัญลักษณ์วาล์วหน่วงเวลาแบบปกติปิด1.png' %}"
+                                alt="Not Found">
                         </td>
                         <td>
                             <p class=" unit-details">สัญลักษณ์</p>
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <img class="w220h220" src="{% static 'image/การทำงานวาล์วหน่วงเวลาแบบปกติปิด1.png ' %}">
-                            <img class="w220h220" src="{% static 'image/การทำงานวาล์วหน่วงเวลาแบบปกติปิด2.png' %}">
+                        <td class="row-2">
+                            <img class="w220h220" src="{% static 'image/การทำงานวาล์วหน่วงเวลาแบบปกติปิด1.png ' %}"
+                                alt="Not Found">
+                            <img class="w220h220" src="{% static 'image/การทำงานวาล์วหน่วงเวลาแบบปกติปิด2.png' %}"
+                                alt="Not Found">
                         </td>
                         <td>
                             <p class=" unit-details">การทำงาน <br>
