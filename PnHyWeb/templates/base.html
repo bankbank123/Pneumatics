@@ -146,12 +146,7 @@
             drawer_container.style.display = "none";
         }
     };
-    const token_check = localStorage.getItem('token')
-
-    if (!token_check) {
-        console.log('test')
-        window.location.href = "{% url 'login' %}"
-    }
+    
     window.addEventListener("resize", handleResize);
 
     const onClickUnit_1 = () => {
@@ -233,7 +228,6 @@
         $.post('/getUser', { token: token }, function (data) {
             const user = data
             document.getElementById('usernameFull').innerText = user.first_name + ' ' + user.last_name
-
         })
     }
 

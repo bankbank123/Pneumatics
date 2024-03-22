@@ -70,12 +70,12 @@
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        document.addEventListener("click" , function(e) {
+        document.addEventListener("click", function (e) {
             const error = document.getElementById('error')
             const error_container = document.getElementById('error-container')
             const login_input = document.getElementById('login-input')
             const password_input = document.getElementById('password-input')
-            if (e.target === login_input || e.target === password_input){
+            if (e.target === login_input || e.target === password_input) {
                 error_container.style.display = 'none'
                 error.innerHTML = ''
             }
@@ -103,10 +103,6 @@
                 });
         };
 
-        const token = localStorage.getItem('token');
-        if (token) {
-            window.location.href = "{% url 'home' %}";
-        }
 
         function onHoverInformation() {
             const information_container = document.getElementById('information-container')
