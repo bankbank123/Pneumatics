@@ -76,27 +76,27 @@ WSGI_APPLICATION = 'PnWeb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# if not DEBUG:
-#     DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
-# else:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': 'db.sqlite3',
-#         }}
+if not DEBUG:
+    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': 'db.sqlite3',
+        }}
 
 # ตั้งค่า database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'student_db', # ชื่อของฐานข้อมููล
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"},
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'student_db', # ชื่อของฐานข้อมููล
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#         'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"},
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
