@@ -23,8 +23,9 @@
     height: 500px;
 }
 
-.unit-2-video {
-    width: 750px;
+.unit-video {
+    max-width: 1024px;
+    width: 100%;
     height: 675px;
     object-fit: cover;
 }

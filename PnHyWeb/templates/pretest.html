@@ -261,7 +261,7 @@
   </div>
 
 
-  <div id="result" class="result">
+  <div id="result" class="result" style="display: none;">
     <h2>คะแนนที่ได้: <span id="score"></span></h2>
     <div class="line"></div>
   </div>
@@ -331,6 +331,7 @@
   let score = 0;
   let score_text = document.getElementById("score").innerText;
   function nextQuestion(currentQuestionId, nextQuestionId, questionNumber) {
+    const result_container = document.getElementById('result')
     const score_text = document.getElementById('score')
     const currentQuestion = document.getElementById(currentQuestionId);
     const selectedAnswer = currentQuestion.querySelector('input[type="radio"]:checked');
@@ -341,6 +342,7 @@
     if (questionNumber == 15) {
       checkAnswer(currentQuestion, questionNumber);
       score_text.innerHTML = score
+      result_container.style.display = "flex"
       postScorePretest();
       return;
     } else if (questionNumber <= 14) {
