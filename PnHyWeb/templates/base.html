@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{% static 'css/U3.css' %}">
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'css/competency.css' %}">
+    <link rel="stylesheet" href="{% static 'css/worksheet.css' %}">
     
     {% block title %}
     {% endblock %}
@@ -27,7 +28,7 @@
         </div>
         <div class="narbar-link-container">
             <div class="narbar-link" id="navbar-link-unit" onmouseenter="onMouseHover()">บทเรียน</div>
-            <div class="narbar-link">กิจกรรม</div>
+            <div class="narbar-link" onclick="onClickActivity()">กิจกรรม</div>
             <div class="narbar-link" id="navbar-link-test-main" onmouseenter="onMouseHoverTest()">แบบทดสอบ</div>
             <div class="narbar-link Logout">ออกจากระบบ</div>
             <div class="navbar-link-unit" id="navbar-link-unit-container" onmouseenter="onMouseHover()"
@@ -89,7 +90,8 @@
             <div class="sub-unit-2 sub-unit" onclick="onClickUnit_2()">หน่วยที่ 2</div>
             <div class="sub-unit-3 sub-unit" onclick="onClickUnit_3()">หน่วยที่ 3</div>
         </div>
-        <div class="drawer-activity sub-drawer"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+        <div class="drawer-activity sub-drawer" onclick="onClickActivity()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                 fill="currentColor" class="bi bi-activity drawer-icon sub-drawer-icon" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                     d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2" />
@@ -151,6 +153,9 @@
 
     
 
+    const onClickActivity = () => {
+        window.location.href = "{% url 'worksheet' %}"
+    }
     const onClickUnit_1 = () => {
         window.location.href = "{% url 'unit1' %}"
     }

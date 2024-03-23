@@ -40,6 +40,9 @@ def posttest(request):
 def studentReport(request):
     return render(request, 'studentReport.html')
 
+def worksheet(request):
+    return render(request, 'worksheet.html')
+
 @csrf_exempt
 def register_post(request):
     if request.method == 'POST':

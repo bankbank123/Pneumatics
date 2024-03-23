@@ -26,4 +26,5 @@ urlpatterns = [
     path("studentReport", views.studentReport, name="studentReport"),
     path("pretestPost", views.postPretest, name="pretestPost"),
     path("postPosttest", views.postPosttest, name="postPosttest"),
+    path("worksheet/", views.worksheet, name="worksheet"),
 ]
