@@ -30,7 +30,7 @@
             <div class="narbar-link" id="navbar-link-unit" onmouseenter="onMouseHover()">บทเรียน</div>
             <div class="narbar-link" onclick="onClickActivity()">กิจกรรม</div>
             <div class="narbar-link" id="navbar-link-test-main" onmouseenter="onMouseHoverTest()">แบบทดสอบ</div>
-            <div class="narbar-link Logout">ออกจากระบบ</div>
+            <div class="narbar-link Logout" onclick="postLogout()">ออกจากระบบ</div>
             <div class="navbar-link-unit" id="navbar-link-unit-container" onmouseenter="onMouseHover()"
                 onmouseleave="onMouseLeave()">
                 <div class="navbar-unit" onclick="onClickUnit_1()">หน่วยที่ 1</div>
@@ -116,7 +116,7 @@
             <div class="sub-test sub-unit" onclick="onClickPretest()">แบบฝึกหัดก่อนเรียน</div>
             <div class="sub-test sub-unit" onclick="onClickPosttest()">แบบฝึกหัดหลังเรียน</div>
         </div>
-        <div class="drawer-exit sub-drawer">
+        <div class="drawer-exit sub-drawer" onclick="postLogout()">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                 class="bi bi-door-open drawer-icon sub-drawer-icon" viewBox="0 0 16 16">
                 <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1" />
@@ -151,7 +151,13 @@
     
     window.addEventListener("resize", handleResize);
 
-    
+    const postLogout = () => {
+        if (token) {
+            $.post('/postLogout', { token: token })
+            localStorage.removeItem('token', null)
+            window.location.href = "{% url 'home' %}";
+        }
+    }
 
     const onClickActivity = () => {
         window.location.href = "{% url 'worksheet' %}"
