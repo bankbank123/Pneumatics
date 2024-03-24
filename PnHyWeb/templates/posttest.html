@@ -259,7 +259,7 @@
   </div>
 
 
-  <div id="result" class="result">
+  <div id="result" class="result" style="display: none;">
     <h2>คะแนนที่ได้: <span id="score"></span></h2>
     <div class="line"></div>
   </div>
@@ -354,6 +354,7 @@
       const btn_submit = document.getElementById('btn-submit')
       checkAnswer(currentQuestion, questionNumber);
       score_text.innerHTML = score
+      result_container.style.display = "flex"
       postScorePosttest();
       return;
     } else if (questionNumber <= 14) {
