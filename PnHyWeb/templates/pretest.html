@@ -154,7 +154,7 @@
       </div>
       <button class="btn btn-primary" onclick="nextQuestion('question9', 'question10', 9)">ถัดไป</button>
     </div>
-    <div class="question" id="question10">
+    <div class="question " id="question10">
       <h2>10. จากรูป โค้ด 1.1 ต้องแทนที่อักษรใด</h2>
       <div class="question-row">
         <div class="question-exam">
@@ -188,7 +188,7 @@
       <div class="choice-container"><input type="radio" name="q11" value="จ"> จ. สปริง</div>
       <button class="btn btn-primary" onclick="nextQuestion('question11', 'question12', 11)">ถัดไป</button>
     </div>
-    <div class="question" id="question12">
+    <div class="question " id="question12">
       <h2>12. อุปกรณ์ Y1.2 คืออุปกรณ์ข้อใด</h2>
       <div class="question-row">
         <div class="question-exam">
@@ -291,6 +291,7 @@
   }
 
   const onZoom = () => {
+    const backgroud = document.getElementById('root')
     const zoom = document.getElementById('zoom-image')
     const zoom_icon = document.getElementById('zoom-icon')
     zoom.classList.add("zoom")

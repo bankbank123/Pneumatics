@@ -43,6 +43,11 @@
     height: 300px;
 }
 
+.unit-3 {
+    object-fit: contain;
+    height: max-content;
+}
+
 @media (max-width: 1024px) and (min-width: 768px) {
     .w350h175 {
         width: 300px;
